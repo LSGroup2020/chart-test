@@ -521,12 +521,62 @@ document.getElementById('bar').onclick = function() {
     myChart.update();
 });*/
 
+function fnClickCheck(){
+    var check_1 = $('#check_1').is(":checked");  //농업인수
+    var check_2 = $('#check_2').is(":checked");  //업무상손상자
+    var check_3 = $('#check_3').is(":checked");  //업무상손상 발생률
+
+    var check_4 = $('#check_4').is(":checked");  //총계
+    var check_5 = $('#check_5').is(":checked");  //사용함
+    var check_6 = $('#check_6').is(":checked");  //사용안함
+
+    myChart.getDatasetMeta(0).hidden=true;
+    myChart.getDatasetMeta(1).hidden=true;
+    myChart.getDatasetMeta(2).hidden=true;
+    myChart.getDatasetMeta(3).hidden=true;
+    myChart.getDatasetMeta(4).hidden=true;
+    myChart.getDatasetMeta(5).hidden=true;
+    myChart.getDatasetMeta(6).hidden=true;
+    myChart.getDatasetMeta(7).hidden=true;
+    myChart.getDatasetMeta(8).hidden=true;
+
+
+    console.log(check_1);
+
+
+    if( check_1 ) {
+        if( check_4 ) myChart.getDatasetMeta(0).hidden = false;  // 총계
+        if( check_5 ) myChart.getDatasetMeta(1).hidden = false;  // 사용
+        if( check_6 ) myChart.getDatasetMeta(2).hidden = false;  // 사용안함
+    }
+
+    if( check_2 ) {
+        if( check_4 ) myChart.getDatasetMeta(3).hidden = false;  // 총계
+        if( check_5 ) myChart.getDatasetMeta(4).hidden = false;  // 사용
+        if( check_6 ) myChart.getDatasetMeta(5).hidden = false;  // 사용안함
+    }
+
+    if( check_3 ) {
+        if( check_4 ) myChart.getDatasetMeta(6).hidden = false;  // 총계
+        if( check_5 ) myChart.getDatasetMeta(7).hidden = false;  // 사용
+        if( check_6 ) myChart.getDatasetMeta(8).hidden = false;  // 사용안함
+    }
+
+    myChart.update();
+
+}
+
+
+
+
 function gethumanValue(event)  {
     if(event.target.checked)  {
+
         myChart.getDatasetMeta(0).hidden=false;
         myChart.getDatasetMeta(1).hidden=false;
         myChart.getDatasetMeta(2).hidden=false;
         myChart.update();
+
     }else {
         myChart.getDatasetMeta(0).hidden=true;
         myChart.getDatasetMeta(1).hidden=true;

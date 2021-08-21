@@ -180,33 +180,59 @@
                         <a href="javascript:content_print();"><img src="/pubWeb/img/btn_printPV.gif" alt="인쇄미리보기"></a>
                         <a href="javascript:getExcelDown();"><img src="/pubWeb/img/btn_download1l.gif" alt="다운로드"></a>
 
-                        <ul class="option_check_area">
+                        <%--<ul class="option_check_area">
                             <li>
-                                <input id="check_1" class="checkbox" type="checkbox" name="" checked="checked" onclick='gethumanValue(event)'>
+                                <input id="check_1" class="checkbox" type="checkbox" name="check_1" checked="checked" onclick='fnClickCheck();'>
                                 <label for="check_1">농업인수</label>
                             </li>
                             <li>
-                                <input id="check_2" class="checkbox" type="checkbox" name="" checked="checked" onclick='getworkValue(event)'>
+                                <input id="check_2" class="checkbox" type="checkbox" name="check_2" checked="checked" onclick='getworkValue(event)'>
                                 <label for="check_2">업무상 손상자 수</label>
                             </li>
                             <li>
-                                <input id="check_3" class="checkbox" type="checkbox" name="" checked="checked" onclick='getpercentageValue(event)'>
+                                <input id="check_3" class="checkbox" type="checkbox" name="check_3" checked="checked" onclick='getpercentageValue(event)'>
                                 <label for="check_3">업무상 손상 발생률</label>
                             </li>
                             <li>
-                                <input id="check_4" class="checkbox" type="checkbox" name="" checked="checked" onclick='getallValue(event)'>
+                                <input id="check_4" class="checkbox" type="checkbox" name="check_4" checked="checked" onclick='getallValue(event)'>
                                 <label for="check_4">총계</label>
                             </li>
                             <li>
-                                <input id="check_5" class="checkbox" type="checkbox" name="" checked="checked" onclick='getuseValue(event)'>
+                                <input id="check_5" class="checkbox" type="checkbox" name="check_5" checked="checked" onclick='getuseValue(event)'>
                                 <label for="check_5">사용함</label>
                             </li>
                             <li>
-                                <input id="check_6" class="checkbox" type="checkbox" name="" checked="checked" onclick='getnotValue(event)'>
+                                <input id="check_6" class="checkbox" type="checkbox" name="check_6" checked="checked" onclick='getnotValue(event)'>
+                                <label for="check_6">사용 안함</label>
+                            </li>
+                        </ul>--%>
+
+                        <ul class="option_check_area">
+                            <li>
+                                <input id="check_1" class="checkbox" type="checkbox" name="check_1" checked="checked" onclick='fnClickCheck();'>
+                                <label for="check_1">농업인수</label>
+                            </li>
+                            <li>
+                                <input id="check_2" class="checkbox" type="checkbox" name="check_2" checked="checked" onclick='fnClickCheck();'>
+                                <label for="check_2">업무상 손상자 수</label>
+                            </li>
+                            <li>
+                                <input id="check_3" class="checkbox" type="checkbox" name="check_3" checked="checked" onclick='fnClickCheck();'>
+                                <label for="check_3">업무상 손상 발생률</label>
+                            </li>
+                            <li>
+                                <input id="check_4" class="checkbox" type="checkbox" name="check_4" checked="checked" onclick='fnClickCheck();'>
+                                <label for="check_4">총계</label>
+                            </li>
+                            <li>
+                                <input id="check_5" class="checkbox" type="checkbox" name="check_5" checked="checked" onclick='fnClickCheck();'>
+                                <label for="check_5">사용함</label>
+                            </li>
+                            <li>
+                                <input id="check_6" class="checkbox" type="checkbox" name="check_6" checked="checked" onclick='fnClickCheck();'>
                                 <label for="check_6">사용 안함</label>
                             </li>
                         </ul>
-
                     </div>
 
                     <h5>그래프</h5>
